@@ -1,0 +1,13 @@
+def compareTriplets(a, b)
+ score_array = [0, 0]
+ i = 0
+  while i < a.length
+    if a[i] > b[i]
+      score_array[0] += 1
+    elsif a[i] < b[i]   
+      score_array[1] += 1
+    end
+  i += 1
+  end
+ return score_array
+end
