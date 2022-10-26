@@ -1,0 +1,14 @@
+def diagonalDifference(arr)
+  # Write your code here
+  left_sum = 0
+  right_sum = 0
+  index = 0
+  end_row = arr.length - 1
+  arr.each do |row|
+    left_sum += row[index]
+    right_sum += row[end_row - index]
+    index += 1
+  end
+  difference = (left_sum - right_sum).abs
+  return difference
+end
