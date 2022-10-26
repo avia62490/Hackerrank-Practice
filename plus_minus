@@ -1,0 +1,24 @@
+def plusMinus(arr)
+    # Write your code here
+  positive_count = 0.000000
+  zero_count = 0.0
+  negative_count = 0.0
+  
+  arr.each do |number|
+    if number > 0
+      positive_count += 1.000000
+    elsif number == 0
+      zero_count += 1.0
+    elsif number < 0
+      negative_count += 1.0    
+    end  
+  end
+  
+  pos_ratio = (positive_count / arr.length).to_f.truncate(6)
+  neg_ratio = (negative_count / arr.length).to_f.truncate(6)
+  zero_ratio = (zero_count / arr.length).to_f.truncate(6)
+  
+  p pos_ratio
+  p neg_ratio
+  p zero_ratio
+end
