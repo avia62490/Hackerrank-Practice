@@ -2,16 +2,16 @@
 
 # Find the sum of all the multiples of 3 or 5 below 1000.
 
-def three_five_multiples(n)
-  multiples = []
-  i = 1
-  while i < n
-    if i % 3 == 0 || i % 5 == 0
-      multiples << i
+class Multiples
+  def self.run(n)
+    multiples = []
+    i = 1
+    while i < n
+      if i % 3 == 0 || i % 5 == 0
+        multiples << i
+      end
+      i += 1
     end
-    i += 1
+    return multiples.sum
   end
-  return multiples.sum
 end
-
-p three_five_multiples(100)
