@@ -3,15 +3,13 @@
 # Find the sum of all the multiples of 3 or 5 below 1000.
 
 class Multiples
-  def self.run(n)
-    multiples = []
-    i = 1
-    while i < n
-      if i % 3 == 0 || i % 5 == 0
-        multiples << i
-      end
-      i += 1
-    end
-    return multiples.sum
+
+  def self.run(number)
+    (1...number).filter_map {|n| n if multiple_of_three_or_five?(n)}.sum
   end
+
+  def self.multiple_of_three_or_five?(number)
+    number % 3 == 0 || number % 5 == 0
+  end
+
 end
